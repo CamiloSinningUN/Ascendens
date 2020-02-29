@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Button : MonoBehaviour
+public class Button_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +15,13 @@ public class Button : MonoBehaviour
     {
         
     }
-    public void abrirJugar(string x)
+    public void jugar(string x)
     {
         SceneManager.LoadScene(x);
+    }
+    
+    public void salir()
+    {
+        Application.Quit();
     }
 }
