@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Inicia_Sesi\xF3n.unity"
     guid: 88cd4c1d0b8c7ea4aa4ca0ccdce59eec
+  - enabled: 1
+    path: Assets/Scenes/Partidas_Guardadas.unity
+    guid: 40bd3b9c9f20f9349851cf81e9a8b9d0
+  - enabled: 1
+    path: Assets/Scenes/Nivel_1.unity
+    guid: ca664d9db9f9e2547bbd69910ce58e99
   m_configObjects: {}
