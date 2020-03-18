@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Clase_objetos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public enum TipoOb {Luz,Oscuridad,Humano }
+    public int IdObjeto;
+    public string Nombre;
+    public TipoOb TipoObjeto;
+    public Clase_personaje MiPersonaje;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

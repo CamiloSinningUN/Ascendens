@@ -4,15 +4,5 @@ using UnityEngine;
 
 public class Ascendens : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Clase_Partida[] MisPartidas = new Clase_Partida[3];
 }

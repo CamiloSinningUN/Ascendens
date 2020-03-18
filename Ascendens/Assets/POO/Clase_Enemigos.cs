@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Clase_Enemigos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public enum TipoEn { Esbirro, Boss }
+    public int Fuerza, vida,IdEnemigo,drop;
+    public TipoEn TipoEnemigo;
+    public ArrayList MisNIveles;
+    
 
-    // Update is called once per frame
-    void Update()
-    {
         
-    }
+
 }
