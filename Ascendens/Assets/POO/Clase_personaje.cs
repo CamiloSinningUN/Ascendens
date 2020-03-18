@@ -4,24 +4,11 @@ using UnityEngine;
 
 public class Clase_personaje : MonoBehaviour
 {
-    public int dinero;
-    public int id;
-    public int vida;
-    public int mana;
-    public int fuerza;
-    public string nick;
-    public int dificultad;
-    public int minivel;
+   public int Dinero,IdPersonaje,Vida,Fuerza,Mana,Dificultad;
+   public string Nombre;
+    public Clase_Partida MiPartida;
+    public ArrayList MisObjetos;
 
-    public Clase_personaje(int dinero, int id, int vida, int mana, int fuerza, string nick, int dificultad,int minivel)
-    {
-        this.dinero = dinero;
-        this.id = id;
-        this.vida = vida;
-        this.mana = mana;
-        this.fuerza = fuerza;
-        this.nick = nick;
-        this.dificultad = dificultad;
-        this.minivel = minivel;
-    }
+
+    
 }
