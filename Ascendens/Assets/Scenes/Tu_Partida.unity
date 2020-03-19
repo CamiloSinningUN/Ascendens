@@ -490,8 +490,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 971029330}
-        m_MethodName: enabled
+      - m_Target: {fileID: 895441533434377936, guid: 02c9422b998f4b241b56f084f378eea1,
+          type: 3}
+        m_MethodName: Nueva_o_Continuar
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
