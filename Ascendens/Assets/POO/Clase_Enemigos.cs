@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///<summary>
+///Clase enemigos.
+///</summary>
+///<remarks>
+///Da atributos y funciones a los enemigos.
+///</remarks>
+
 public class Clase_Enemigos : MonoBehaviour
 {
     public enum TipoEn { Esbirro, Boss }

@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+///<summary>
+///Clase principal del proyecto.
+///</summary>
+///<remarks>
+///Admnistra las partidas, enemigos y personjes.
+///</remarks>
+
 public class Ascendens : MonoBehaviour
 {
     public Clase_Partida[] MisPartidas = new Clase_Partida[3];
@@ -12,6 +19,11 @@ public class Ascendens : MonoBehaviour
     public Clase_Nivel Nivel2 = new Clase_Nivel("Nivel_2", 2, Clase_Nivel.TipoNi.Normal);
     public Clase_Nivel Nivel3 = new Clase_Nivel("Nivel_3", 3, Clase_Nivel.TipoNi.Boss);
     public int aux;
+
+    ///<summary>
+    ///Permite crear o continuar una partida.
+    ///</summary>
+
     public void Nueva_o_Continuar(int boton)
     {
         
