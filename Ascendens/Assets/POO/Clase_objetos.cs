@@ -10,4 +10,9 @@ public class Clase_objetos : MonoBehaviour
     public TipoOb TipoObjeto;
     public Clase_personaje MiPersonaje;
 
+    public Ascendens mipartida;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }

@@ -17,13 +17,13 @@ public class Clase_Partida : MonoBehaviour
         
     }
     public Ascendens MiMain;
-    
     public void InicializarPersonaje(InputField MiNombre)
     {
-        Debug.Log(MiMain.aux);
-        Clase_personaje NuevoPersonaje = new Clase_personaje(0, 0, 3, 3, 3, 1, MiNombre.text, MiMain.MisPartidas[MiMain.aux]);
-        MiMain.MisPartidas[MiMain.aux].MiPersonaje = NuevoPersonaje;
-        MiMain.MisPartidas[MiMain.aux].MiNivel = MiMain.Nivel1;
+   
+        int aux1 = PlayerPrefs.GetInt("MiBoton");
+        Clase_personaje NuevoPersonaje = new Clase_personaje(0, 0, 3, 3, 3, 1, MiNombre.text, MiMain.MisPartidas[aux1]);
+        MiMain.MisPartidas[aux1].MiPersonaje = NuevoPersonaje;
+        MiMain.MisPartidas[aux1].MiNivel =MiMain.Nivel1;
         
         
 

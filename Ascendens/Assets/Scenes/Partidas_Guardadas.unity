@@ -319,7 +319,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5965846591418223137, guid: b65a5264c60a8564eae9d9d3cee2806f,
+      - m_Target: {fileID: -149339870403954195, guid: a7abc61f5585ccc4abc9abb714396d72,
           type: 3}
         m_MethodName: Nueva_o_Continuar
         m_Mode: 3
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5965846591418223137, guid: b65a5264c60a8564eae9d9d3cee2806f,
+      - m_Target: {fileID: -149339870403954195, guid: a7abc61f5585ccc4abc9abb714396d72,
           type: 3}
         m_MethodName: Nueva_o_Continuar
         m_Mode: 3
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5965846591418223137, guid: b65a5264c60a8564eae9d9d3cee2806f,
+      - m_Target: {fileID: -149339870403954195, guid: a7abc61f5585ccc4abc9abb714396d72,
           type: 3}
         m_MethodName: Nueva_o_Continuar
         m_Mode: 3
