@@ -17,13 +17,15 @@ public class Clase_personaje : MonoBehaviour
    public string Nombre;
    public Clase_Partida MiPartida;
    public ArrayList MisObjetos;
+   public float timer;
 
     ///<summary>
     ///Asigna estadisticas iniciales al personaje.
     ///</summary>
-    
+
     public Clase_personaje(int dinero, int idPersonaje, int vida, int fuerza, int mana, int dificultad, string nombre, Clase_Partida miPartida)
     {
+
         Dinero = dinero;
         IdPersonaje = idPersonaje;
         Vida = vida;
@@ -41,7 +43,10 @@ public class Clase_personaje : MonoBehaviour
     ///</summary>
     
     void Update()
+
     {
+        
+
         if (Input.GetKey("d"))
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(10000f * Time.deltaTime, 0));
@@ -63,6 +68,7 @@ public class Clase_personaje : MonoBehaviour
         {
             puedesaltar = false;
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 2000f));
+            gameObject.GetComponent<Animator>().SetBool("Jumping", true);
         }
        
             
@@ -77,6 +83,7 @@ public class Clase_personaje : MonoBehaviour
         if (collision.transform.tag=="piso")
         {
             puedesaltar = true;
+            gameObject.GetComponent<Animator>().SetBool("Jumping", false);
         }
         if (collision.transform.tag == "Moneda")
         {
