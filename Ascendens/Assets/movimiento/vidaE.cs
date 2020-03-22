@@ -5,7 +5,7 @@ using UnityEngine;
 public class vidaE : MonoBehaviour
 {
     public int vida = 3;
-    public GameObject lado;
+    
     // Start is called before the first frame update
     void Start()
     {
