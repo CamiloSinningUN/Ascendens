@@ -45,7 +45,11 @@ public class Clase_personaje : MonoBehaviour
     void Update()
 
     {
-        
+        if (Input.GetKeyDown("f"))
+
+        {
+            gameObject.GetComponent<Animator>().SetBool("atacking", true);           
+        }
 
         if (Input.GetKey("d"))
         {
