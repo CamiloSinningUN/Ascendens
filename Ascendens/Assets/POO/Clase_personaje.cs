@@ -71,7 +71,7 @@ public class Clase_personaje : MonoBehaviour
         if (Input.GetKeyDown("w")&&puedesaltar)
         {
             puedesaltar = false;
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 2000f));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 4500f));
             gameObject.GetComponent<Animator>().SetBool("Jumping", true);
         }
        
