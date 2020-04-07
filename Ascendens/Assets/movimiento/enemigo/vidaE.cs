@@ -19,24 +19,36 @@ public class vidaE : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
         
     }
     private void OnTriggerEnter(Collider other)
     {
+      
+
         if (other.gameObject.tag=="bala")
         {
+            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("hit");
             vida--;
         }
         if (other.gameObject.tag == "espada")
         {
-            vida-=2;
+            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("hit");
+            vida -=2;
         }
         if (other.gameObject.tag == "esquina")
-        {
-
+        {            
             enemigo.aire = false;
             enemigo.propulcion = float.Parse (other.gameObject.name);
         }
+        if (other.gameObject.tag=="Player")
+        {
+            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("atack");
+        }
+
+
+
     }
     private void OnTriggerExit(Collider other)
     {
