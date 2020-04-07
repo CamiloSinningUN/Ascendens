@@ -32,13 +32,15 @@ public class goomba : MonoBehaviour
     
     public void salto()
     {
+        
+
         body.velocity = new Vector3(vel, body.velocity.y, 0);
+        
     }
     public void mover()
     {
 
-        GameObject.Find("Enemigo").GetComponent<Animator>().SetBool("moving", true);
-       
+        GameObject.Find("Enemigo").GetComponent<Animator>().SetBool("moving", true);      
         body.velocity = new Vector3(vel, body.velocity.y+ propulcion, 0);
     }
 }

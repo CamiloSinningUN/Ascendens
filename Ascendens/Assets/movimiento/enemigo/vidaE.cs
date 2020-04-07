@@ -17,7 +17,14 @@ public class vidaE : MonoBehaviour
     {
         if (vida<=0)
         {
-            Destroy(gameObject);
+            GameObject.Find("Enemigo").GetComponent<Animator>().SetBool("live",false);
+            enemigo.vel = 0;
+            enemigo.tag = "piso";
+            gameObject.GetComponent<BoxCollider>().center = new Vector3(1, -0.5f, 0);
+            gameObject.GetComponent<BoxCollider>().size= new Vector3(1, 0, 0);
+            GameObject.Find("izquierdo").GetComponent<BoxCollider>().enabled = false;
+            GameObject.Find("derecho").GetComponent<BoxCollider>().enabled = false;
+
         }
 
         
@@ -38,15 +45,20 @@ public class vidaE : MonoBehaviour
             vida -=2;
         }
         if (other.gameObject.tag == "esquina")
-        {            
+        {
+            
             enemigo.aire = false;
             enemigo.propulcion = float.Parse (other.gameObject.name);
+            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("jumping");
         }
+        //que paresca que le pega cuando se acerca
         if (other.gameObject.tag=="Player")
         {
             GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("atack");
         }
-
+        
+        
+        
 
 
     }
