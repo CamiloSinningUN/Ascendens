@@ -8,6 +8,8 @@ TagManager:
   - piso
   - enemigo
   - Moneda
+  - espada
+  - esquina
   layers:
   - Default
   - TransparentFX

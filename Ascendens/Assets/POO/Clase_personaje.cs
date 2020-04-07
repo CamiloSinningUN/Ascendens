@@ -18,6 +18,8 @@ public class Clase_personaje : MonoBehaviour
    public Clase_Partida MiPartida;
    public ArrayList MisObjetos;
    public float timer;
+    public float velocidad = 2f;
+    public Rigidbody body;
 
     ///<summary>
     ///Asigna estadisticas iniciales al personaje.
@@ -35,6 +37,7 @@ public class Clase_personaje : MonoBehaviour
         Nombre = nombre;
         MiPartida = miPartida;
         MisObjetos = new ArrayList();
+
     }
     bool puedesaltar = false;
 

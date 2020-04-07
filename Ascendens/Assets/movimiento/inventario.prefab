@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1076643474433284333}
   - component: {fileID: 8609905077115590812}
   m_Layer: 0
-  m_Name: informacion
+  m_Name: inventario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f60122ce654d7c43bcb14a1ac1bf1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 3
-  MaxVida: 3
+  dinero: 12
+  cantidadFlechas: 0
+  vida: 0
+  vidaMax: 0

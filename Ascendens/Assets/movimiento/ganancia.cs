@@ -2,21 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class disparo : MonoBehaviour
+public class ganancia : MonoBehaviour
 {
-    public GameObject bala;
+    public datos cantidad;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag=="Player")
         {
-            Instantiate(bala,gameObject.transform.position, Quaternion.identity);
+            cantidad.dinero += 1;
+            Destroy(gameObject);
         }
     }
 }

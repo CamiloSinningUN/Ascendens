@@ -5,11 +5,11 @@ using UnityEngine;
 public class vidaE : MonoBehaviour
 {
     public int vida = 3;
-    
+    public goomba enemigo;
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemigo = GetComponent<goomba>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,22 @@ public class vidaE : MonoBehaviour
         {
             vida--;
         }
-        
+        if (other.gameObject.tag == "espada")
+        {
+            vida-=2;
+        }
+        if (other.gameObject.tag == "esquina")
+        {
 
+            enemigo.aire = false;
+            enemigo.propulcion = float.Parse (other.gameObject.name);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "esquina")
+        {
+            enemigo.aire = true ;
+        }
     }
 }

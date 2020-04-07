@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class datos : MonoBehaviour
 {
-    public int vida,MaxVida;
+    public int dinero, cantidadFlechas,vida,vidaMax=15;
     
     void Start()
     {
@@ -14,6 +14,13 @@ public class datos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (vidaMax<vida)
+        {
+            vida = vidaMax;
+        }
+        if (vida <=0 )
+        {
+            //muerte 
+        }
     }
 }

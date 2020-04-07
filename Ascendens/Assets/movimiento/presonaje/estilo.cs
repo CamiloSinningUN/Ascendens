@@ -5,6 +5,8 @@ using UnityEngine;
 public class estilo : MonoBehaviour
 {
     private Rigidbody body;
+    public float t;
+    public int direccion;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +16,28 @@ public class estilo : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        body.velocity = new Vector3(10, 0, 0);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag!="Player")
+        if (direccion==0)
+        {
+            direccion = 1;
+        }
+        body.velocity = new Vector3(direccion * 10, 0, 0);
+        t += Time.deltaTime;
+        if (t>10)
         {
             Destroy(gameObject);
+
         }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag != "Player"  & !other.isTrigger)
+        {
+            Destroy(gameObject);
+            Debug.Log(other.tag);
+        }
+        
         
     }
 }
