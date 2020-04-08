@@ -97,8 +97,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-
     void movimiento ()
     {
         if (!LD.recibirD & !LI.recibirD)

@@ -11,7 +11,7 @@ public class goomba : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        body.velocity = new Vector3(0, 0, 0);
+        body.velocity = new Vector3(5, 5, 0);
         aire = false;
     }
 
@@ -24,6 +24,7 @@ public class goomba : MonoBehaviour
         }
         else
         {
+           
         mover();
         }
 
@@ -31,10 +32,15 @@ public class goomba : MonoBehaviour
     
     public void salto()
     {
+        
+
         body.velocity = new Vector3(vel, body.velocity.y, 0);
+        
     }
     public void mover()
     {
+
+        GameObject.Find("Enemigo").GetComponent<Animator>().SetBool("moving", true);      
         body.velocity = new Vector3(vel, body.velocity.y+ propulcion, 0);
     }
 }
