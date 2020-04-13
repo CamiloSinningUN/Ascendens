@@ -15,7 +15,7 @@ public class cambio : MonoBehaviour
     {
         if (!other.isTrigger)
         {
-            mover.vel = -mover.vel;
+            //mover.vel = -mover.vel;
         }
     }
 }

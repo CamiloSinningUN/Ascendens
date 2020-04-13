@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f60122ce654d7c43bcb14a1ac1bf1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dinero: 12
+  dinero: 76
   cantidadFlechas: 0
-  vida: 0
-  vidaMax: 0
+  vida: 2
+  vidaMax: 15

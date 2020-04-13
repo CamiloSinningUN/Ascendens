@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class vidaE : MonoBehaviour
 {
-    public int vida = 3;
-    public goomba enemigo;
+    public int vida = 7;
+    goomba enemigo;
+    public float i=0;
+    bool ataque;
+    public GameObject apariencia;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,7 @@ public class vidaE : MonoBehaviour
     {
         if (vida<=0)
         {
-            GameObject.Find("Enemigo").GetComponent<Animator>().SetBool("live",false);
+            apariencia.GetComponent<Animator>().SetBool("live",false);
             enemigo.vel = 0;
             enemigo.tag = "piso";
             gameObject.GetComponent<BoxCollider>().center = new Vector3(1, -0.5f, 0);
@@ -26,47 +29,50 @@ public class vidaE : MonoBehaviour
             GameObject.Find("derecho").GetComponent<BoxCollider>().enabled = false;
 
         }
+        
+        
+
+    }
 
         
         
-    }
     private void OnTriggerEnter(Collider other)
     {
-      
-
+       
         if (other.gameObject.tag=="bala")
         {
-            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("hit");
+            
             vida--;
         }
         if (other.gameObject.tag == "espada")
         {
-            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("hit");
             vida -=2;
         }
         if (other.gameObject.tag == "esquina")
         {
-            
-            enemigo.aire = false;
+            enemigo.aire = true;
             enemigo.propulcion = float.Parse (other.gameObject.name);
-            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("jumping");
+            apariencia.GetComponent<Animator>().SetBool("jumping", true);
+            apariencia.GetComponent<Animator>().SetBool("moving", false);
         }
         //que paresca que le pega cuando se acerca
-        if (other.gameObject.tag=="Player")
+        
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "piso")
         {
-            GameObject.Find("Enemigo").GetComponent<Animator>().SetTrigger("atack");
+            apariencia.GetComponent<Animator>().SetBool("jumping", false);
+            apariencia.GetComponent<Animator>().SetBool("moving", true);
         }
-        
-        
-        
-
-
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "esquina")
         {
-            enemigo.aire = true ;
+            
+            enemigo.aire = false ;
         }
     }
 }

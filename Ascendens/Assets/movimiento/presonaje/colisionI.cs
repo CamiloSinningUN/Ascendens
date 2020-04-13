@@ -6,6 +6,7 @@ public class colisionI : MonoBehaviour
 {
     
     public bool iZ, recibirD;
+    public int daño;
     // Update is called once per frame
     void Start()
     {
@@ -20,6 +21,12 @@ public class colisionI : MonoBehaviour
         if (other.tag == "enemigo")
         {
             recibirD = true;
+            daño = 1;
+        }
+        if (other.tag == "dañoE")
+        {
+            recibirD = true;
+            daño = int.Parse(other.gameObject.name);
         }
     }
 

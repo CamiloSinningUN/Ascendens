@@ -14,13 +14,6 @@ public class datos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (vidaMax<vida)
-        {
-            vida = vidaMax;
-        }
-        if (vida <=0 )
-        {
-            //muerte 
-        }
+        
     }
 }

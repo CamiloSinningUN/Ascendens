@@ -129,13 +129,17 @@ public class Player : MonoBehaviour
                 if (LD.recibirD)
                 {
                     body.velocity = new Vector3(-empujeL, empujeA, 0);
-                    inve.vida--;
+                    inve.vida-= LD.daño;
                 }
-                if (LI.recibirD)
+                else
                 {
-                    body.velocity = new Vector3(empujeL, empujeA, 0);
-                    inve.vida--;
+                    if (LI.recibirD)
+                    {
+                        body.velocity = new Vector3(empujeL, empujeA, 0);
+                        inve.vida -= LI.daño;
+                    }
                 }
+                
                 sprite.GetComponent<Animator>().SetBool("daño", true);
                 empuje = true;
             }
