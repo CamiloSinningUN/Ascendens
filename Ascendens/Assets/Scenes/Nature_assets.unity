@@ -6227,6 +6227,9 @@ MonoBehaviour:
   Dificultad: 0
   Nombre: 
   MiPartida: {fileID: 0}
+  timer: 0
+  velocidad: 0
+  body: {fileID: 0}
 --- !u!95 &1622677778
 Animator:
   serializedVersion: 3
@@ -6313,6 +6316,9 @@ MonoBehaviour:
   Dificultad: 0
   Nombre: 
   MiPartida: {fileID: 0}
+  timer: 0
+  velocidad: 0
+  body: {fileID: 0}
 --- !u!212 &1622677782
 SpriteRenderer:
   m_ObjectHideFlags: 0
