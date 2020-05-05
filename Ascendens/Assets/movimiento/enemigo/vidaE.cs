@@ -51,7 +51,7 @@ public class vidaE : MonoBehaviour
         if (other.gameObject.tag == "esquina")
         {
             enemigo.aire = true;
-            enemigo.propulcion = float.Parse (other.gameObject.name);
+            enemigo.propulcion = float  .Parse (other.gameObject.name);
             apariencia.GetComponent<Animator>().SetBool("jumping", true);
             apariencia.GetComponent<Animator>().SetBool("moving", false);
         }
